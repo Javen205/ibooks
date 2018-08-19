@@ -4,7 +4,7 @@
 
 ## 简介
 
-![](./doc/assets/img/IJPay-t.png)
+![](./doc/assets/IJPay-t.png)
 
 
 [![Gitee star](https://gitee.com/javen205/IJPay/badge/star.svg?theme=white)](https://gitee.com/javen205/IJPay/stargazers)
