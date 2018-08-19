@@ -1,11 +1,11 @@
 {
   "name": "ibooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一直在努力,从未放弃",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release":"webpack",
+    "release": "webpack",
     "example": "http-server -p 8888"
   },
   "repository": {
@@ -29,5 +29,8 @@
     "babel-preset-latest": "^6.24.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "user": "0.0.0"
   }
 }
