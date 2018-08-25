@@ -20,8 +20,6 @@
 
 https://github.com/Javen205/ibooks/issues
 
-## 关于作者
-
 
 
 

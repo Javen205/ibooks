@@ -20,11 +20,14 @@ Gitee：[https://gitee.com/Javen205/IJPay-Demo](https://gitee.com/Javen205/IJPay
 
 **欢迎Start支持项目发展:\)**
 
+[接入指引](../ijpay/README.md)
+
 **特别说明：**
 
 * JPay是简易而不简单的Android 支付SDK，JPay是对微信App支付、支付宝App支付的二次封装,对外提供一个相对简单的接口以及支付结果的回调。
 * IJPay是[JPay](https://gitee.com/Javen205/JPay)后台接口的SDK不依赖任何第三方 mvc 框架，仅仅作为工具使用简单快速完成支付模块的开发，可轻松嵌入到任何系统里。
 * IOS支付SDK，敬请关注。
+
 
 
 
