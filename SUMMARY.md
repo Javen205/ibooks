@@ -37,5 +37,5 @@
         * [微信现金红包](doc/ijpay/wxpay/redpack.md)
         * [微信企业付款](doc/ijpay/wxpay/transfers.md)
         * [微信退款](doc/ijpay/wxpay/refund.md)
-        * [服务端异步通知](doc/ijpay/wxpay/doc/ijpay/wxpay-notify.md)  
+        * [服务端异步通知](doc/ijpay/wxpay/wxpay-notify.md)  
 

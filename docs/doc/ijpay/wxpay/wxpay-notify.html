@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>微信公众号支付 · GitBook</title>
+        <title>服务端异步通知 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="qrPay.html" />
     
-    
-    <link rel="prev" href="micropay.html" />
+    <link rel="prev" href="refund.html" />
     
 
     </head>
@@ -473,7 +471,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2.4" data-path="wechatPay.html">
+        <li class="chapter " data-level="1.7.2.4" data-path="wechatPay.html">
             
                 <a href="wechatPay.html">
             
@@ -577,7 +575,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.12" data-path="wxpay-notify.html">
+        <li class="chapter active" data-level="1.7.2.12" data-path="wxpay-notify.html">
             
                 <a href="wxpay-notify.html">
             
@@ -630,7 +628,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >微信公众号支付</a>
+        <a href="../../.." >服务端异步通知</a>
     </h1>
 </div>
 
@@ -645,155 +643,143 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;">&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;</h3>
-<p><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1" target="_blank">&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
-<p><a href="http://blog.csdn.net/zyw_java/article/details/54023968" target="_blank">&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x4E4B;&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;</a></p>
-<h3 id="&#x5F00;&#x53D1;&#x6B65;&#x9AA4;">&#x5F00;&#x53D1;&#x6B65;&#x9AA4;</h3>
+                                <h3 id="&#x5B98;&#x65B9;&#x63A5;&#x5165;&#x6587;&#x6863;">&#x5B98;&#x65B9;&#x63A5;&#x5165;&#x6587;&#x6863;</h3>
 <ol>
-<li>&#x8BBE;&#x7F6E;&#x652F;&#x4ED8;&#x76EE;&#x5F55;</li>
-<li>&#x8BBE;&#x7F6E;&#x6388;&#x6743;&#x57DF;&#x540D;</li>
-<li>&#x6388;&#x6743;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;(openId&#x672A;&#x77E5;)</li>
-<li>&#x7EDF;&#x4E00;&#x4E0B;&#x5355;</li>
-<li>&#x5FAE;&#x4FE1;&#x5185;H5&#x8C03;&#x8D77;&#x652F;&#x4ED8;</li>
-<li>&#x652F;&#x4ED8;&#x7ED3;&#x679C;&#x901A;&#x77E5;</li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7" target="_blank">&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x6587;&#x6863;</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_7" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F;&#x652F;&#x4ED8;&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x6587;&#x6863;</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_7" target="_blank">&#x626B;&#x7801;&#x652F;&#x4ED8;&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x6587;&#x6863;</a></li>
+<li><a href="https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_7&amp;index=3" target="_blank">App&#x652F;&#x4ED8;&#x670D;&#x52A1;&#x5668;&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x6587;&#x6863;</a></li>
 </ol>
-<blockquote>
-<p>&#x5EFA;&#x8BAE;&#x652F;&#x4ED8;&#x76EE;&#x5F55;&#x8BBE;&#x7F6E;&#x5230;&#x652F;&#x4ED8;URL&#x4E0A;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;</p>
-</blockquote>
-<p>&#x5F00;&#x53D1;&#x6B65;&#x9AA4;-<a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3" target="_blank">&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;&#x6587;&#x6863;</a></p>
-<h3 id="&#x83B7;&#x53D6;openid">&#x83B7;&#x53D6;openId</h3>
-<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421140842" target="_blank">&#x6388;&#x6743;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x5B98;&#x65B9;&#x6587;&#x6863;</a>
-<a href="http://blog.csdn.net/zyw_java/article/details/61415123" target="_blank">&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x5F00;&#x53D1;&#x4E4B;&#x6388;&#x6743;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</a></p>
-<h3 id="&#x7EDF;&#x4E00;&#x4E0B;&#x5355;">&#x7EDF;&#x4E00;&#x4E0B;&#x5355;</h3>
-<p>&#x8C03;&#x7528;&#x7EDF;&#x4E00;&#x4E0B;&#x5355;&#x63A5;&#x53E3;&#x540E;&#x751F;&#x6210;&#x9884;&#x4ED8;&#x8BA2;&#x5355; &#x53C2;&#x8003;<code>&#x516C;&#x7528;API</code></p>
-<h3 id="&#x5FAE;&#x4FE1;&#x5185;h5&#x8C03;&#x8D77;&#x652F;&#x4ED8;">&#x5FAE;&#x4FE1;&#x5185;H5&#x8C03;&#x8D77;&#x652F;&#x4ED8;</h3>
-<p>&#x5BF9;&#x751F;&#x6210;&#x7684;&#x9884;&#x4ED8;&#x8BA2;&#x5355;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x7B7E;&#x540D;&#x518D;&#x4F7F;&#x7528;JS API&#x5524;&#x8D77;&#x652F;&#x4ED8; &#x53C2;&#x8003;<code>&#x516C;&#x7528;API</code> </p>
-<p>JS&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x53C2;&#x8003;-<a href="https://gitee.com/javen205/IJPay-Demo/blob/master/src/main/webapp/WEB-INF/_views/wxpay.html" target="_blank">IJPay-Demo</a></p>
-<h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
-<p><a href="https://gitee.com/javen205/IJPay-Demo" target="_blank">https://gitee.com/javen205/IJPay-Demo</a></p>
+<h3 id="&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x5904;&#x7406;&#x6B65;&#x9AA4;">&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x5904;&#x7406;&#x6B65;&#x9AA4;</h3>
+<ol>
+<li>&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;</li>
+<li>&#x6821;&#x9A8C;&#x8BA2;&#x5355;&#x53BB;&#x91CD;</li>
+<li>&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</li>
+<li>&#x54CD;&#x5E94;&#x5904;&#x7406;&#x7ED3;&#x679C;</li>
+</ol>
+<h3 id="&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;">&#x9A8C;&#x8BC1;&#x7B7E;&#x540D;</h3>
+<p>&#x53C2;&#x8003; <code>&#x516C;&#x7528;API</code></p>
+<h3 id="&#x4EE3;&#x7801;&#x793A;&#x4F8B;">&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h3>
+<p><a href="https://github.com/Javen205/IJPay-Demo" target="_blank">https://github.com/Javen205/IJPay-Demo</a></p>
 <p><a href="https://gitee.com/javen205/IJPay-Demo/blob/SpringBoot/src/main/java/com/ijpay/controller/wxpay/WxPayController.java" target="_blank">Spring Boot&#x7248;&#x672C;Demo</a></p>
-<pre><code>    /**
-     * &#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;
-     */
-    @RequestMapping(value =&quot;/webPay&quot;,method = {RequestMethod.POST,RequestMethod.GET})
+<pre><code>    @RequestMapping(value = &quot;/pay_notify&quot;,method={RequestMethod.POST,RequestMethod.GET})
     @ResponseBody
-    public AjaxResult webPay(HttpServletRequest request,HttpServletResponse response,
-            @RequestParam(&quot;total_fee&quot;) String total_fee) {
-        // openId&#xFF0C;&#x91C7;&#x7528; &#x7F51;&#x9875;&#x6388;&#x6743;&#x83B7;&#x53D6; access_token API&#xFF1A;SnsAccessTokenApi&#x83B7;&#x53D6;
+    public String pay_notify(HttpServletRequest request) {
+        // &#x652F;&#x4ED8;&#x7ED3;&#x679C;&#x901A;&#x7528;&#x901A;&#x77E5;&#x6587;&#x6863;: https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7
+        String xmlMsg = HttpKit.readData(request);
+        System.out.println(&quot;&#x652F;&#x4ED8;&#x901A;&#x77E5;=&quot;+xmlMsg);
+        Map&lt;String, String&gt; params = PaymentKit.xmlToMap(xmlMsg);
+//        String appid  = params.get(&quot;appid&quot;);
+//        //&#x5546;&#x6237;&#x53F7;
+//        String mch_id  = params.get(&quot;mch_id&quot;);
+        String result_code  = params.get(&quot;result_code&quot;);
+//        String openId      = params.get(&quot;openid&quot;);
+//        //&#x4EA4;&#x6613;&#x7C7B;&#x578B;
+//        String trade_type      = params.get(&quot;trade_type&quot;);
+//        //&#x4ED8;&#x6B3E;&#x94F6;&#x884C;
+//        String bank_type      = params.get(&quot;bank_type&quot;);
+//        // &#x603B;&#x91D1;&#x989D;
+//        String total_fee     = params.get(&quot;total_fee&quot;);
+//        //&#x73B0;&#x91D1;&#x652F;&#x4ED8;&#x91D1;&#x989D;
+//        String cash_fee     = params.get(&quot;cash_fee&quot;);
+//        // &#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x8BA2;&#x5355;&#x53F7;
+//        String transaction_id      = params.get(&quot;transaction_id&quot;);
+//        // &#x5546;&#x6237;&#x8BA2;&#x5355;&#x53F7;
+//        String out_trade_no      = params.get(&quot;out_trade_no&quot;);
+//        // &#x652F;&#x4ED8;&#x5B8C;&#x6210;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;yyyyMMddHHmmss
+//        String time_end      = params.get(&quot;time_end&quot;);    
+        /////////////////////////////&#x4EE5;&#x4E0B;&#x662F;&#x9644;&#x52A0;&#x53C2;&#x6570;///////////////////////////////////
 
-        String openId = (String) request.getSession().getAttribute(&quot;openId&quot;);
-
-        if (StrKit.isBlank(openId)) {
-            result.addError(&quot;openId is null&quot;);
-            return result;
-        }
-        if (StrKit.isBlank(total_fee)) {
-            result.addError(&quot;&#x8BF7;&#x8F93;&#x5165;&#x6570;&#x5B57;&#x91D1;&#x989D;&quot;);
-            return result;
-        }
-
-        String ip = IpKit.getRealIp(request);
-        if (StrKit.isBlank(ip)) {
-            ip = &quot;127.0.0.1&quot;;
-        }
-
-        Map&lt;String, String&gt; params = WxPayApiConfigKit.getWxPayApiConfig()
-                .setAttach(&quot;IJPay &#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x6D4B;&#x8BD5;  -By Javen&quot;)
-                .setBody(&quot;IJPay &#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x6D4B;&#x8BD5;  -By Javen&quot;)
-                .setOpenId(openId)
-                .setSpbillCreateIp(ip)
-                .setTotalFee(total_fee)
-                .setTradeType(TradeType.JSAPI)
-                .setNotifyUrl(notify_url)
-                .setOutTradeNo(String.valueOf(System.currentTimeMillis()))
-                .build();
-
-        String xmlResult = WxPayApi.pushOrder(false,params);
-log.info(xmlResult);
-        Map&lt;String, String&gt; resultMap = PaymentKit.xmlToMap(xmlResult);
-
-        String return_code = resultMap.get(&quot;return_code&quot;);
-        String return_msg = resultMap.get(&quot;return_msg&quot;);
-        if (!PaymentKit.codeIsOK(return_code)) {
-            result.addError(return_msg);
-            return result;
-        }
-        String result_code = resultMap.get(&quot;result_code&quot;);
-        if (!PaymentKit.codeIsOK(result_code)) {
-            result.addError(return_msg);
-            return result;
-        }
-        // &#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#x5728;return_code &#x548C;result_code&#x90FD;&#x4E3A;SUCCESS&#x7684;&#x65F6;&#x5019;&#x6709;&#x8FD4;&#x56DE;
-
-
-        String prepay_id = resultMap.get(&quot;prepay_id&quot;);
-
-        Map&lt;String, String&gt; packageParams = PaymentKit.prepayIdCreateSign(prepay_id);
-
-        String jsonStr = JSON.toJSONString(packageParams);
-        result.success(jsonStr);
-        return result;
+        String attach      = params.get(&quot;attach&quot;);
+//        String fee_type      = params.get(&quot;fee_type&quot;);
+//        String is_subscribe      = params.get(&quot;is_subscribe&quot;);
+//        String err_code      = params.get(&quot;err_code&quot;);
+//        String err_code_des      = params.get(&quot;err_code_des&quot;);
+        // &#x6CE8;&#x610F;&#x91CD;&#x590D;&#x901A;&#x77E5;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x540C;&#x4E00;&#x8BA2;&#x5355;&#x53F7;&#x53EF;&#x80FD;&#x6536;&#x5230;&#x591A;&#x6B21;&#x901A;&#x77E5;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x5148;&#x5224;&#x65AD;&#x8BA2;&#x5355;&#x72B6;&#x6001;
+        // &#x907F;&#x514D;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x3001;&#x5173;&#x95ED;&#x3001;&#x9000;&#x6B3E;&#x7684;&#x8BA2;&#x5355;&#x88AB;&#x518D;&#x6B21;&#x66F4;&#x65B0;
+//        Order order = Order.dao.getOrderByTransactionId(transaction_id);
+//        if (order==null) {
+            if(PaymentKit.verifyNotify(params, WxPayApiConfigKit.getWxPayApiConfig().getPaternerKey())){
+                if ((&quot;SUCCESS&quot;).equals(result_code)) {
+                    //&#x66F4;&#x65B0;&#x8BA2;&#x5355;&#x4FE1;&#x606F;
+                    log.warn(&quot;&#x66F4;&#x65B0;&#x8BA2;&#x5355;&#x4FE1;&#x606F;:&quot;+attach);
+                    //&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7B49;
+                    Map&lt;String, String&gt; xml = new HashMap&lt;String, String&gt;();
+                    xml.put(&quot;return_code&quot;, &quot;SUCCESS&quot;);
+                    xml.put(&quot;return_msg&quot;, &quot;OK&quot;);
+                    return PaymentKit.toXml(xml);
+                }
+            }
+//        }
+        return null;
     }
 </code></pre><p><a href="https://gitee.com/javen205/IJPay-Demo/blob/master/src/main/java/com/ijpay/controller/weixin/WxPayController.java" target="_blank">Jfinal&#x7248;&#x672C;Demo</a></p>
-<pre><code>public void webPay() {
+<pre><code>public void pay_notify() {
+        //&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;
+        StringBuffer sbf=new StringBuffer();
 
-        // openId&#xFF0C;&#x91C7;&#x7528; &#x7F51;&#x9875;&#x6388;&#x6743;&#x83B7;&#x53D6; access_token API&#xFF1A;SnsAccessTokenApi&#x83B7;&#x53D6;
-        String openId = (String) getSession().getAttribute(&quot;openId&quot;);
-
-        String total_fee=getPara(&quot;total_fee&quot;);
-
-        if (StrKit.isBlank(openId)) {
-            ajax.addError(&quot;openId is null&quot;);
-            renderJson(ajax);
-            return;
-        }
-        if (StrKit.isBlank(total_fee)) {
-            ajax.addError(&quot;&#x8BF7;&#x8F93;&#x5165;&#x6570;&#x5B57;&#x91D1;&#x989D;&quot;);
-            renderJson(ajax);
-            return;
+        Enumeration&lt;String&gt;  en=getParaNames();
+        while (en.hasMoreElements()) {
+            Object o= en.nextElement();
+            sbf.append(o.toString()+&quot;=&quot;+getPara(o.toString()));
         }
 
-        String ip = IpKit.getRealIp(getRequest());
-        if (StrKit.isBlank(ip)) {
-            ip = &quot;127.0.0.1&quot;;
-        }
+        log.error(&quot;&#x652F;&#x4ED8;&#x901A;&#x77E5;&#x53C2;&#x6570;&#xFF1A;&quot;+sbf.toString());
 
-        Map&lt;String, String&gt; params = WxPayApiConfigKit.getWxPayApiConfig()
-                .setAttach(&quot;IJPay &#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x6D4B;&#x8BD5;  -By Javen&quot;)
-                .setBody(&quot;IJPay &#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x6D4B;&#x8BD5;  -By Javen&quot;)
-                .setOpenId(openId)
-                .setSpbillCreateIp(ip)
-                .setTotalFee(total_fee)
-                .setTradeType(TradeType.JSAPI)
-                .setNotifyUrl(notify_url)
-                .setOutTradeNo(String.valueOf(System.currentTimeMillis()))
-                .build();
+        // &#x652F;&#x4ED8;&#x7ED3;&#x679C;&#x901A;&#x7528;&#x901A;&#x77E5;&#x6587;&#x6863;: https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_7
+        String xmlMsg = HttpKit.readData(getRequest());
+        System.out.println(&quot;&#x652F;&#x4ED8;&#x901A;&#x77E5;=&quot;+xmlMsg);
+        Map&lt;String, String&gt; params = PaymentKit.xmlToMap(xmlMsg);
 
-        String xmlResult = WxPayApi.pushOrder(false,params);
-log.info(xmlResult);
-        Map&lt;String, String&gt; result = PaymentKit.xmlToMap(xmlResult);
+//        String appid  = params.get(&quot;appid&quot;);
+//        //&#x5546;&#x6237;&#x53F7;
+//        String mch_id  = params.get(&quot;mch_id&quot;);
+        String result_code  = params.get(&quot;result_code&quot;);
+//        String openId      = params.get(&quot;openid&quot;);
+//        //&#x4EA4;&#x6613;&#x7C7B;&#x578B;
+//        String trade_type      = params.get(&quot;trade_type&quot;);
+//        //&#x4ED8;&#x6B3E;&#x94F6;&#x884C;
+//        String bank_type      = params.get(&quot;bank_type&quot;);
+//        // &#x603B;&#x91D1;&#x989D;
+//        String total_fee     = params.get(&quot;total_fee&quot;);
+//        //&#x73B0;&#x91D1;&#x652F;&#x4ED8;&#x91D1;&#x989D;
+//        String cash_fee     = params.get(&quot;cash_fee&quot;);
+//        // &#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x8BA2;&#x5355;&#x53F7;
+//        String transaction_id      = params.get(&quot;transaction_id&quot;);
+//        // &#x5546;&#x6237;&#x8BA2;&#x5355;&#x53F7;
+//        String out_trade_no      = params.get(&quot;out_trade_no&quot;);
+//        // &#x652F;&#x4ED8;&#x5B8C;&#x6210;&#x65F6;&#x95F4;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;yyyyMMddHHmmss
+//        String time_end      = params.get(&quot;time_end&quot;);
 
-        String return_code = result.get(&quot;return_code&quot;);
-        String return_msg = result.get(&quot;return_msg&quot;);
-        if (!PaymentKit.codeIsOK(return_code)) {
-            ajax.addError(return_msg);
-            renderJson(ajax);
-            return;
-        }
-        String result_code = result.get(&quot;result_code&quot;);
-        if (!PaymentKit.codeIsOK(result_code)) {
-            ajax.addError(return_msg);
-            renderJson(ajax);
-            return;
-        }
-        // &#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#x5728;return_code &#x548C;result_code&#x90FD;&#x4E3A;SUCCESS&#x7684;&#x65F6;&#x5019;&#x6709;&#x8FD4;&#x56DE;
-        String prepay_id = result.get(&quot;prepay_id&quot;);
+        /////////////////////////////&#x4EE5;&#x4E0B;&#x662F;&#x9644;&#x52A0;&#x53C2;&#x6570;///////////////////////////////////
 
-        Map&lt;String, String&gt; packageParams = PaymentKit.prepayIdCreateSign(prepay_id);
+        String attach      = params.get(&quot;attach&quot;);
+//        String fee_type      = params.get(&quot;fee_type&quot;);
+//        String is_subscribe      = params.get(&quot;is_subscribe&quot;);
+//        String err_code      = params.get(&quot;err_code&quot;);
+//        String err_code_des      = params.get(&quot;err_code_des&quot;);
 
-        String jsonStr = JsonKit.toJson(packageParams);
-        ajax.success(jsonStr);
-        renderJson(ajax);
+
+        // &#x6CE8;&#x610F;&#x91CD;&#x590D;&#x901A;&#x77E5;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x540C;&#x4E00;&#x8BA2;&#x5355;&#x53F7;&#x53EF;&#x80FD;&#x6536;&#x5230;&#x591A;&#x6B21;&#x901A;&#x77E5;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x5148;&#x5224;&#x65AD;&#x8BA2;&#x5355;&#x72B6;&#x6001;
+        // &#x907F;&#x514D;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x3001;&#x5173;&#x95ED;&#x3001;&#x9000;&#x6B3E;&#x7684;&#x8BA2;&#x5355;&#x88AB;&#x518D;&#x6B21;&#x66F4;&#x65B0;
+//        Order order = Order.dao.getOrderByTransactionId(transaction_id);
+//        if (order==null) {
+            if(PaymentKit.verifyNotify(params, WxPayApiConfigKit.getWxPayApiConfig().getPaternerKey())){
+                if ((&quot;SUCCESS&quot;).equals(result_code)) {
+                    //&#x66F4;&#x65B0;&#x8BA2;&#x5355;&#x4FE1;&#x606F;
+                    log.warn(&quot;&#x66F4;&#x65B0;&#x8BA2;&#x5355;&#x4FE1;&#x606F;:&quot;+attach);
+
+                    //&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7B49;
+
+                    Map&lt;String, String&gt; xml = new HashMap&lt;String, String&gt;();
+                    xml.put(&quot;return_code&quot;, &quot;SUCCESS&quot;);
+                    xml.put(&quot;return_msg&quot;, &quot;OK&quot;);
+                    renderText(PaymentKit.toXml(xml));
+                    return;
+                }
+            }
+//        }
+        renderText(&quot;&quot;);
     }
 </code></pre>
                                 
@@ -822,14 +808,10 @@ log.info(xmlResult);
 
             
                 
-                <a href="micropay.html" class="navigation navigation-prev " aria-label="Previous page: 微信刷卡支付">
+                <a href="refund.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 微信退款">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="qrPay.html" class="navigation navigation-next " aria-label="Next page: 微信扫码支付">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -838,7 +820,7 @@ log.info(xmlResult);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"微信公众号支付","level":"1.7.2.4","depth":3,"next":{"title":"微信扫码支付","level":"1.7.2.5","depth":3,"path":"doc/ijpay/wxpay/qrPay.md","ref":"doc/ijpay/wxpay/qrPay.md","articles":[]},"previous":{"title":"微信刷卡支付","level":"1.7.2.3","depth":3,"path":"doc/ijpay/wxpay/micropay.md","ref":"doc/ijpay/wxpay/micropay.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/ijpay/wxpay/wechatPay.md","mtime":"2018-09-07T06:36:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T06:37:49.719Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"服务端异步通知","level":"1.7.2.12","depth":3,"previous":{"title":"微信退款","level":"1.7.2.11","depth":3,"path":"doc/ijpay/wxpay/refund.md","ref":"doc/ijpay/wxpay/refund.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/ijpay/wxpay/wxpay-notify.md","mtime":"2018-09-07T06:36:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T06:37:49.719Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
