@@ -11,6 +11,7 @@
     * [Android支付SDK-JPay](doc/opensource/JPay.md)
     * [极速开发微信公众号](doc/opensource/weixin_guide.md)
 * [IJPay 文档](doc/ijpay/README.md)
+    * [IJPay-Demo](doc/IJPay-Demo.md)
     * [支付宝支付](doc/ijpay/alipay/README.md)
         * [配置应用环境](doc/ijpay/alipay/alipay-config.md)
         * [IJPay 支付宝初始化](doc/ijpay/alipay/alipay-init.md)
